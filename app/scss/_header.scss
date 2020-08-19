@@ -9,7 +9,7 @@
         animation: fade-in 300ms ease-in-out forwards;
     }
 
-    .header__menu {
+    .header__toggle {
 
         > span:first-child {
             transform: rotate(45deg);
@@ -35,19 +35,20 @@
     background-image: linear-gradient($darkblue, transparent);
 
     &.fade-in {
-        
+
     }
 }
     
     nav {
         position: relative;
-        background-color: $white;
+        background-color: #fff;
         padding-top: 1.0625rem;
         padding-bottom: 1.0625rem;
-
     }
 
         &__logo {
+
+            margin-top: 4px;
 
             img {
                 width: 8.8125rem;
@@ -55,8 +56,7 @@
             }
         }
    
-    &__menu {
-
+    &__toggle {
 
         > span {
             display: block;
@@ -69,6 +69,24 @@
             &:not(:last-child) {
                 margin-bottom: 5px;
             }
+        }
+    }
+
+    &__menu {
+        background: $white;
+        padding: 1.625rem;
+        border-radius: 5px;
+        position: absolute;
+        width: calc(100% - 3rem);
+        left:50%;
+        transform: translateX(-50%);
+        margin-top: 24px;
+
+        a {
+            display: block;
+            text-align: center;
+            color: $darkblue;
+            padding: 0.625rem;
         }
     }
 
