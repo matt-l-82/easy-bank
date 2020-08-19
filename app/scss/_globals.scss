@@ -1,0 +1,53 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    color: $grayishblue;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+
+    &-jc-sb { 
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// VISIBILITY
+.hide-for-mobile {
+    // Hide for mobile and tablet
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    // Hide for desktop viewport width
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
