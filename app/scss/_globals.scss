@@ -15,9 +15,17 @@ body {
     font-weight: 300;
     line-height: 1.5;
 
+    @include breakpoint-up(large) {
+        font-size: $font-md;
+    }
+
     &.noscroll {
         overflow: hidden;
     }
+}
+
+h1, h2, h3 {
+    margin-top: 0;
 }
 
 a, a:visited, a:hover {
@@ -26,8 +34,42 @@ a, a:visited, a:hover {
 
 // SPACING
 .container {
-   padding-left: 1.5rem;
-   padding-right: 1.5rem;
+   max-width: 69.375rem;
+   margin: 0 auto;
+
+   &--pall {
+    padding-top: 2.25rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.25rem;
+    padding-left: 1.5rem;
+   }
+
+    &--py {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+
+    &--px {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &--pt {
+        padding-top: 2.25rem;
+    }
+
+    &--pr {
+        padding-right: 1.5rem;
+    }
+
+    &--pb {
+        padding-bottom: 2.25rem;
+    }
+
+    &--pl {
+        padding-left: 1.5rem;
+    }
+   
 }
 
 
@@ -47,6 +89,19 @@ a, a:visited, a:hover {
         align-items: center;
     }
 }
+
+button,.button {
+    display: inline-block;
+    padding: 1rem 2.1875rem;
+    background: linear-gradient(to right, $limegreen, $brightcyan);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 400;
+}
+
+
 
 // VISIBILITY
 .hide-for-mobile {

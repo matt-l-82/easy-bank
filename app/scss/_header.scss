@@ -1,5 +1,4 @@
 .header {
-
     
 // Hamburger open styles
 
@@ -33,10 +32,6 @@
     bottom: 0;
     left: 0;
     background-image: linear-gradient($darkblue, transparent);
-
-    &.fade-in {
-
-    }
 }
     
     nav {
@@ -81,6 +76,7 @@
         left:50%;
         transform: translateX(-50%);
         margin-top: 24px;
+        z-index: 2;
 
         a {
             display: block;
@@ -115,22 +111,22 @@
 
             &:hover {
                 color: $darkblue;
+
+                &::before {
+                    opacity: 1;
+                }
             }
         }
-    }
+    }  
 
-    button, .button {
-        padding: 1rem 2.1875rem;
-        background: linear-gradient(to right, $limegreen, $brightcyan);
-        border-radius: 50px;
-        border: none;
-        cursor: pointer;
-        color: #fff;
-        font-weight: 400;
-    }
+&__cta {
+    font-size: $font-sm;
+    color: $white;
+    transition: opacity 300ms ease-in-out;
 
-    &__cta {
-        font-size: $font-sm;
+    &:hover {
+        opacity: 0.75;
+        } 
     }
 }
 
